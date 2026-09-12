@@ -1,0 +1,1 @@
+/// Snapshot of the current environment.\npublic struct EnvironmentSnapshot: Sendable {\n    public let values: [String: String]\n    public init(_ env: [String: String] = ProcessInfo.processInfo.environment) { self.values = env }\n    public subscript(key: String) -> String? { values[key] }\n}
